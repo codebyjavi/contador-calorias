@@ -1,3 +1,5 @@
+import Form from "./components/Form"
+
 function App() {
 
   return (
@@ -11,6 +13,9 @@ function App() {
 
       <section className="bg-green-400">
         <div className="max-w-5xl mx-auto py-20">
+          <Form
+          
+          />
         </div>
       </section>
     </>
