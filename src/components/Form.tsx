@@ -55,7 +55,7 @@ export default function Form() {
         <input
             type="submit"
             className="bg-gray-800 text-white w-full p-4 font-bold uppercase cursor-pointer"
-            value="Guardar comida o guardar ejercicio"
+            value={activity.category === 1 ? 'Guardar Comida' : 'Guardar Ejercicio'}
         />
     </form>
   )
