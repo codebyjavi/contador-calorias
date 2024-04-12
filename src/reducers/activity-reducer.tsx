@@ -1,3 +1,4 @@
+import { act } from "react-dom/test-utils"
 import { Activity } from "../types"
 
 export type ActivityActions =
@@ -18,7 +19,14 @@ export const activityReducer = (
     ) => {
     
     if(action.type === 'save-activity') {
-        console.log('From save-activity type');
+
+
+
+
+        return {
+            ...state,
+            activities: [...state.activities, action.payload.newActivity]
+        }
     
     }
     
