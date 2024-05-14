@@ -45,9 +45,6 @@ export default function Form({ dispatch }: FormProps) {
         })
     }
     
-    
-
-
   return (
     <form
         className="space-y-5 bg-white shadow p-10 rounded-md"

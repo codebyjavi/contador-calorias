@@ -1,4 +1,3 @@
-import { act } from "react-dom/test-utils"
 import { Activity } from "../types"
 
 export type ActivityActions =
@@ -19,9 +18,6 @@ export const activityReducer = (
     ) => {
     
     if(action.type === 'save-activity') {
-
-
-
 
         return {
             ...state,
