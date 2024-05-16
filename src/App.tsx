@@ -7,9 +7,6 @@ function App() {
 
   const [state, dispatch] = useReducer(activityReducer, initialState)
 
-  console.log(state);
-  
-
   return (
     <>
       <header className="py-8 bg-green-600">
@@ -28,7 +25,9 @@ function App() {
       </section>
 
       <section>
-        <ActivityList/>
+        <ActivityList
+          activities={state.activities}
+        />
       </section>
     </>
   )
