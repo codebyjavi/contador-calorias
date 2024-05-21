@@ -18,9 +18,9 @@ export default function ActivityList({ activities, dispatch } : ActivityListProp
   
   return (
     <>
-      <h2 className='text-4xl font-bold text-slate-600 text-center mt-10'>Comida y Actividades</h2>
+      <h2 className='text-4xl font-bold text-slate-600 text-center mb-10'>Comida y Actividades</h2>
       {activities.map( activity => (
-        <div key={activity.id} className="px-5 py-10 bg-white mt-5 flex justify-between">
+        <div key={activity.id} className="px-5 py-10 bg-slate-100 mt-5 flex justify-between shadow-md">
           <div className="space-y-2 relative">
            <p className={`absolute -top-8 -left-8 px-10 py-2 text-white uppercase font-bold
             ${activity.category === 1 ? 'bg-lime-500' : 'bg-orange-500'}`}>
