@@ -20,6 +20,7 @@ function App() {
         <div className="max-w-3xl mx-auto py-20">
           <Form
             dispatch={dispatch}
+            state={state}
           />
         </div>
       </section>
