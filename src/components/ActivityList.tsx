@@ -38,14 +38,14 @@ export default function ActivityList({ activities, dispatch } : ActivityListProp
           <div className="flex gap-5 items-center">
             <button>
               <PencilSquareIcon
-                className="h-8 w-8 text-gray-800"
+                className="size-10 text-gray-800"
                 onClick={() => dispatch({ type: 'set-activeId', payload: {id: activity.id} })}
               />
             </button>
 
             <button>
               <XCircleIcon
-                className="h-8 w-8 text-red-500"
+                className="size-10 text-red-500"
                 onClick={() => dispatch({ type: 'delete-activity', payload: {id: activity.id} })}
               />
             </button>
