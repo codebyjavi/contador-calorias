@@ -1,7 +1,7 @@
 import { Activity } from "../types"
 import { categories } from "../data/categories"
 import { useMemo } from "react"
-import { PencilSquareIcon } from '@heroicons/react/24/outline'
+import { PencilSquareIcon, XCircleIcon } from '@heroicons/react/24/outline'
 import { ActivityActions } from "../reducers/activity-reducer"
 
 type ActivityListProps = {
@@ -40,6 +40,13 @@ export default function ActivityList({ activities, dispatch } : ActivityListProp
               <PencilSquareIcon
                 className="h-8 w-8 text-gray-800"
                 onClick={() => dispatch({ type: 'set-activeId', payload: {id: activity.id} })}
+              />
+            </button>
+
+            <button>
+              <XCircleIcon
+                className="h-8 w-8 text-red-500"
+                onClick={() => dispatch({ type: 'delete-activity', payload: {id: activity.id} })}
               />
             </button>
           </div>
