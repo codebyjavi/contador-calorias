@@ -16,10 +16,15 @@ export default function ActivityList({ activities, dispatch } : ActivityListProp
       categories.map( cat => cat.id === category ? cat.name : '')
     , [activities])
   
+  const isEmpty = useMemo(() => activities.length === 0, [activities])
+
   return (
     <>
       <h2 className='text-4xl font-bold text-slate-600 text-center mb-10'>Comida y Actividades</h2>
-      {activities.map( activity => (
+      {isEmpty ? (<p className="text-center">No hay actividades aún...</p>)
+      :(
+      
+      activities.map( activity => (
         <div key={activity.id} className="px-5 py-10 bg-slate-100 mt-5 flex justify-between shadow-md">
           <div className="space-y-2 relative">
            <p className={`absolute -top-8 -left-8 px-10 py-2 text-white uppercase font-bold
@@ -51,7 +56,8 @@ export default function ActivityList({ activities, dispatch } : ActivityListProp
             </button>
           </div>
         </div>
-      ))}
+      )))}
+      
     </>
   )
 }
