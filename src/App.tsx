@@ -13,7 +13,9 @@ function App() {
   },[state.activities])
 
   const canRestartApp = () => useMemo(() => state.activities.length, [state.activities])
-
+  
+  console.log(state.activities);
+  
   return (
     <>
       <header className="py-8 bg-green-600">
@@ -38,11 +40,11 @@ function App() {
       </section>
 
       <section className="bg-gray-800 py-10">
-        <div className="max-w-3xl mx-auto">
-          <CalorieTracker
-            activities={state.activities}
-          />
-        </div>
+          <div className="max-w-3xl mx-auto">
+            <CalorieTracker
+              activities={state.activities}
+            />
+          </div>
       </section>
 
       <section className="mx-auto p-10">
